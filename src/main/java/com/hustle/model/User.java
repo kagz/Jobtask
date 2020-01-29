@@ -20,11 +20,11 @@ public class User implements Serializable {
 	private String email;
 	private String phone;
 
-	private double age;
+	private int age;
 	private boolean active = true;
 
-	@Column(columnDefinition = "text")
-	private String jobdescription;
+	
+	private String jobDescription;
 
 	public Long getId() {
 		return id;
@@ -34,19 +34,19 @@ public class User implements Serializable {
 		this.id = id;
 	}
 
-	public String getTitle() {
+	public String getName() {
 		return name;
 	}
 
-	public void setTitle(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
-	public String getAuthor() {
+	public String getEmail() {
 		return email;
 	}
 
-	public void setAuthor(String email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 
@@ -58,11 +58,11 @@ public class User implements Serializable {
 		this.phone = phone;
 	}
 
-	public double getOurPrice() {
+	public int getAge() {
 		return age;
 	}
 
-	public void setOurPrice(double age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 
@@ -74,12 +74,12 @@ public class User implements Serializable {
 		this.active = active;
 	}
 
-	public String getDescription() {
-		return jobdescription;
+	public String getjobDescription() {
+		return jobDescription;
 	}
 
-	public void setDescription(String jobdescription) {
-		this.jobdescription = jobdescription;
+	public void setjobDescription(String jobDescription) {
+		this.jobDescription = jobDescription;
 	}
 
 }
