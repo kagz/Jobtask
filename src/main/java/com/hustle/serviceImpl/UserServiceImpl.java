@@ -39,7 +39,8 @@ public class UserServiceImpl implements UserService {
 		return userRepository.save(user);
 	}
 
-	public void removeOne(Long id) {
+	public User removeOne(Long id) {
 		userRepository.delete(id);
+		return null;
 	}
 }

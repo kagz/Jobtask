@@ -29,15 +29,18 @@ public class UserController {
 		return userService.findAll();
 	}
 
-	@RequestMapping(value = "/update", method = RequestMethod.POST)
-	public User updateUserPost(@RequestBody User user) {
-		return userService.save(user);
-	}
+
 
 	@RequestMapping("/{id}")
 	public User getUser(@PathVariable("id") Long id) {
 		User user = userService.findOne(id);
 		return user;
+	}
+	
+	@RequestMapping("/remove/{id}")
+	public  void deleteUser(@PathVariable("id") Long id) {
+		User user = userService.removeOne(id);
+		return;
 	}
 
 }
